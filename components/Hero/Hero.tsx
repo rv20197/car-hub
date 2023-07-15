@@ -28,9 +28,9 @@ const Hero = (props: Props) => {
 
 			<div className='hero__image-container'>
 				<div className='hero__image'>
-					<Image src='/hero.png' alt={'hero'} fill className='object-contain' />
-					<div className='hero__image-overlay'/>
+					<Image src='/hero.png' alt={'hero'} fill className='object-contain' priority={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
 				</div>
+				<div className='hero__image-overlay'/>
 			</div>
 		</div>
 	)
