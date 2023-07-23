@@ -1,7 +1,16 @@
 import { carProps } from '../components/CarCard/CarCard';
 
-export async function fetchCars() {
-	const url = 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3';
+export interface FilterInterface {
+	manufacturer: string;
+	year: string | number;
+	fuel: string;
+	limit: string | number;
+	model: string;
+}
+
+export async function fetchCars(filters: FilterInterface) {
+	const { manufacturer, year, model, limit, fuel } = filters;
+	const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`;
 	const options = {
 		method: 'GET',
 		headers: {
