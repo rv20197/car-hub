@@ -1,7 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import CustomButton from '../CustomButton/CustomButton';
-import { updateSearchParams } from '../../utils';
 
 type Props = {
 	pageNumber: number;

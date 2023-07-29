@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import React from 'react';
 import { footerLinks } from '../../constants';
 import Link from 'next/link';
 
-type Props = {};
 
-const Footer = (props: Props) => {
+const Footer = () => {
 	return (
 		<footer className='flex flex-col text-black-100 mt-5 border-t border-gray-100'>
 			
