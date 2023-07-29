@@ -23,7 +23,6 @@ const SearchBar = () => {
 
 	const updateSearchParams = (model: string, manufacturer: string) => {
 		const searchParams = new URLSearchParams(window.location.search);
-		debugger;
 		if (model) {
 			searchParams.set('model', model);
 		} else {
