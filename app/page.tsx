@@ -8,7 +8,11 @@ import {
 import { fuels, yearsOfProduction } from '../constants';
 import { FilterInterface, fetchCars } from '../utils';
 
-export default async function Home({ searchParams }: FilterInterface) {
+type HomeProps = {
+	searchParams: FilterInterface;
+};
+
+export default async function Home({ searchParams }: HomeProps) {
 	const allCars = await fetchCars({
 		manufacturer: searchParams.manufacturer || '',
 		year: searchParams.year || 2022,
