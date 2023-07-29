@@ -70,6 +70,7 @@ const CardDetails = ({ isOpen, closeModal, car }: Props) => {
 												src={generateCarImageUrl(car)}
 												alt='car-model'
 												fill
+												sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 												priority
 												className='object-contain'
 											/>
@@ -80,6 +81,7 @@ const CardDetails = ({ isOpen, closeModal, car }: Props) => {
 													src={generateCarImageUrl(car, '29')}
 													alt='car-model'
 													fill
+													sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 													priority
 													className='object-contain'
 												/>
@@ -89,6 +91,7 @@ const CardDetails = ({ isOpen, closeModal, car }: Props) => {
 													src={generateCarImageUrl(car, '33')}
 													alt='car-model'
 													fill
+													sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 													priority
 													className='object-contain'
 												/>
@@ -98,6 +101,7 @@ const CardDetails = ({ isOpen, closeModal, car }: Props) => {
 													src={generateCarImageUrl(car, '13')}
 													alt='car-model'
 													fill
+													sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 													priority
 													className='object-contain'
 												/>

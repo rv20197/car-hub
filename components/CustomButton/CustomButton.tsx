@@ -9,7 +9,7 @@ type CustomButtonProps = {
 	btnType?: 'button' | 'submit' | 'reset';
 	textStyles?: string;
 	rightIcon?: string;
-	isDisabled?: boolean
+	isDisabled?: boolean;
 };
 
 const CustomButton = ({
@@ -30,7 +30,13 @@ const CustomButton = ({
 			<span className={`flex-1 ${textStyles}`}>{title}</span>
 			{rightIcon && (
 				<div className='relative w-6 h-6'>
-					<Image src={rightIcon} alt='right-icon' fill className='object-contain'/>
+					<Image
+						src={rightIcon}
+						alt='right-icon'
+						fill
+						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+						className='object-contain'
+					/>
 				</div>
 			)}
 		</button>
