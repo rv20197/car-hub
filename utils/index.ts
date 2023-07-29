@@ -1,11 +1,11 @@
 import { carProps } from '../components/CarCard/CarCard';
 
 export interface FilterInterface {
-	manufacturer: string;
-	year: string | number;
-	fuel: string;
-	limit: string | number;
-	model: string;
+	manufacturer?: string;
+	year?: number;
+	fuel?: string;
+	limit?: number;
+	model?: string;
 }
 
 export async function fetchCars(filters: FilterInterface) {

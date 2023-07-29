@@ -8,7 +8,7 @@ import {
 import { fuels, yearsOfProduction } from '../constants';
 import { FilterInterface, fetchCars } from '../utils';
 
-type HomeProps = {
+interface HomeProps {
 	searchParams: FilterInterface;
 };
 
