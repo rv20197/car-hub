@@ -29,26 +29,25 @@ export default function Home() {
 	// limit state
 	const [limit, setLimit] = useState(10);
 
-	const getCars = async () => {
-		setLoading(true);
-		try {
-			const result = await fetchCars({
-				manufacturer: manufacturer.toLowerCase() || '',
-				model: model.toLowerCase() || '',
-				fuel: fuel.toLowerCase() || '',
-				year: year || 2022,
-				limit: limit || 10
-			});
-
-			setAllCars(result);
-		} catch (e) {
-			console.error(e);
-		} finally {
-			setLoading(false);
-		}
-	};
-
 	useEffect(() => {
+		const getCars = async () => {
+			setLoading(true);
+			try {
+				const result = await fetchCars({
+					manufacturer: manufacturer.toLowerCase() || '',
+					model: model.toLowerCase() || '',
+					fuel: fuel.toLowerCase() || '',
+					year: year || 2022,
+					limit: limit || 10
+				});
+
+				setAllCars(result);
+			} catch (e) {
+				console.error(e);
+			} finally {
+				setLoading(false);
+			}
+		};
 		getCars();
 	}, [fuel, year, limit, manufacturer, model]);
 
