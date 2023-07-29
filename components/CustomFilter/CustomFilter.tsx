@@ -1,9 +1,7 @@
 'use client';
-import { useState, Fragment, SetStateAction } from 'react';
+import { useState, Fragment } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { Listbox, Transition } from '@headlessui/react';
-import { updateSearchParams } from '../../utils';
 
 type Options = {
 	title: string;
@@ -13,20 +11,15 @@ type Options = {
 type Props = {
 	title: string;
 	options: Options[];
+	setFilter: (arg: any) => void;
 };
 
-const CustomFilter = ({ title, options }: Props) => {
+const CustomFilter = ({ title, options, setFilter }: Props) => {
 	const [selected, setSelected] = useState(options[0]);
-	const router = useRouter();
 
-	const handleUpdateParams = (e: { title: string; value: string }) => {
-		const newPathName = updateSearchParams(title, e.value.toLowerCase());
-		router.push(newPathName);
-	};
-
-	const selectChangeHandler = (e: SetStateAction<Options>) => {
+	const selectChangeHandler = (e: Options) => {
 		setSelected(e);
-		handleUpdateParams(e as Options);
+		setFilter(e.value);
 	};
 
 	return (

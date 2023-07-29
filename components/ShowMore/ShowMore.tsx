@@ -6,17 +6,15 @@ import { updateSearchParams } from '../../utils';
 type Props = {
 	pageNumber: number;
 	isNext: boolean;
+	setLimit: (arg: number) => void;
 };
 
-const ShowMore = ({ pageNumber, isNext }: Props) => {
+const ShowMore = ({ pageNumber, isNext, setLimit }: Props) => {
 	const router = useRouter();
 
 	const handleNavigation = () => {
 		const newLimit = (pageNumber + 1) * 10;
-
-		const newPathName = updateSearchParams('limit', newLimit.toString());
-
-		router.push(newPathName);
+		setLimit(newLimit);
 	};
 
 	return (
