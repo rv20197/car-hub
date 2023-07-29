@@ -1,5 +1,5 @@
 'use client';
-import React, { ButtonHTMLAttributes, MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 import Image from 'next/image';
 
 type CustomButtonProps = {
@@ -18,9 +18,7 @@ const CustomButton = ({
 	handleClick,
 	btnType,
 	textStyles,
-	rightIcon,
-	isDisabled
-}: CustomButtonProps) => {
+	rightIcon}: CustomButtonProps) => {
 	return (
 		<button
 			disabled={false}
