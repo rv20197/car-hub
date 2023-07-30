@@ -10,7 +10,7 @@ type searchBarProps = {
 };
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-	<button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
+	<button type='submit' className={`ml-1 z-10 ${otherClasses}`}>
 		<Image
 			src={'/magnifying-glass.svg'}
 			alt='magnifying-glass'
