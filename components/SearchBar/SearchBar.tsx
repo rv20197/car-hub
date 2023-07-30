@@ -58,7 +58,7 @@ const SearchBar = ({ setManuFacturer, setModel }: searchBarProps) => {
 					name='model'
 					value={searchModel}
 					onChange={e => setSearchModel(e.target.value)}
-					placeholder='Tiguan...'
+					placeholder='Search Model'
 					className='search-bar__input'
 				/>
 				<SearchButton otherClasses='sm:hidden' />
