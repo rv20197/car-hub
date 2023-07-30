@@ -36,12 +36,6 @@ const CarCard = ({ car }: carProps) => {
 				</h2>
 			</div>
 
-			<p className='flex mt-6 text-[32px] font-extrabold'>
-				<span className='self-start text-[14px] font-semibold'>$</span>
-				{carRent}
-				<span className='self-end text-[14px] font-medium'>/day</span>
-			</p>
-
 			<div className='relative w-full h-40 my-3 object-contain'>
 				<Image
 					src={generateCarImageUrl(car)}
